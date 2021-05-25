@@ -155,13 +155,13 @@
   }
    
   .restaurant-item .restaurant-item__content p {
+    margin: 10px 0 0 0;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
   }
-   
    
   /*
     restaurant
