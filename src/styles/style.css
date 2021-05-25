@@ -26,6 +26,41 @@
     top: 0;
   }
   
+/*
+ * Jumbotron
+ */
+  .hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url('/src/public/images/heros/hero-image_4.jpg');
+    background-position: center;
+    background-color: green;
+  }
+
+  .hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .hero__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 36px;
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+  }
+
+  .hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 300;
+    text-shadow: -1px -1px 0 #333, 1px -1px 0 #333, -1px 1px 0 #333, 1px 1px 0 #333;
+  }
+
+
   /*
     AppBar
   */
