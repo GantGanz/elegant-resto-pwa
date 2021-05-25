@@ -1,20 +1,20 @@
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
-  <h2 class="restaurant__title">${restaurant.name}</h2>
-  <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.poster_path}" alt="${restaurant.name}" />
+  <h2 class="restaurant__title">${restaurant.restaurant.name}</h2>
+  <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="${restaurant.restaurant.name}" />
   <div class="restaurant__info">
   <h3>Information</h3>
     <h4>City</h4>
-    <p>${restaurant.city}</p>
+    <p>${restaurant.restaurant.city}</p>
     <h4>Address</h4>
-    <p>${restaurant.address}</p>
+    <p>${restaurant.restaurant.address}</p>
     <h4>Rating</h4>
-    <p>${restaurant.rating}</p>
+    <p>${restaurant.restaurant.rating}</p>
   </div>
   <div class="restaurant__overview">
     <h3>Description</h3>
-    <p>${restaurant.description}</p>
+    <p>${restaurant.restaurant.description}</p>
   </div>
 </div>
 `;
