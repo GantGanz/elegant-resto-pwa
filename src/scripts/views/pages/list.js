@@ -1,11 +1,12 @@
-import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
+/* eslint-disable no-console */
+import TheRestaurantDbSource from '../../data/therestaurantdb-source';
 import { createRestaurantItemTemplate } from '../templates/template-creator';
 
-const Like = {
+const List = {
   async render() {
     return `
       <div class="content">
-        <h2 class="content__heading">Your Liked Restaurant</h2>
+        <h2 class="content__heading">List of Restaurants</h2>
         <div id="restaurants" class="restaurants">
  
         </div>
@@ -14,7 +15,7 @@ const Like = {
   },
 
   async afterRender() {
-    const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    const restaurants = await TheRestaurantDbSource.listRestaurants();
     const restaurantsContainer = document.querySelector('#restaurants');
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
@@ -22,4 +23,4 @@ const Like = {
   },
 };
 
-export default Like;
+export default List;

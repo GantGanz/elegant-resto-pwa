@@ -1,12 +1,11 @@
-import NowPlaying from '../views/pages/now-playing';
-import Upcoming from '../views/pages/upcoming';
+/* eslint-disable import/extensions */
+import List from '../views/pages/list';
 import Detail from '../views/pages/detail';
 import Like from '../views/pages/like';
 
 const routes = {
-  '/': NowPlaying, // default page
-  '/now-playing': NowPlaying,
-  '/upcoming': Upcoming,
+  '/': List, // default page
+  '/list': List,
   '/detail/:id': Detail,
   '/like': Like,
 };
