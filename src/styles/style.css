@@ -141,7 +141,9 @@
   }
    
   .content .content__heading {
-    font-weight: normal;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
   }
    
    
