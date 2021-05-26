@@ -1,20 +1,37 @@
 import CONFIG from '../../globals/config';
 
+function arrayRenderer(array) {
+  return array.map((object) => object.name).join(' - ');
+}
+// function arraysRenderer(arrays) {
+//   return arrays.map((array) => arrayRenderer(array));
+// }
+// <h3>Customer Reviews</h3>
+// <p>${arraysRenderer(restaurant.restaurant.customerReviews)}</p>
+// <hr></hr>
+
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title">${restaurant.restaurant.name}</h2>
   <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="${restaurant.restaurant.name}" />
   <div class="restaurant__info">
-  <h3>Information</h3>
     <h4>City</h4>
     <p>${restaurant.restaurant.city}</p>
     <h4>Address</h4>
     <p>${restaurant.restaurant.address}</p>
     <h4>Rating</h4>
     <p>${restaurant.restaurant.rating}</p>
+    <h4>Categories</h4>
+    <p><span id="category">${arrayRenderer(restaurant.restaurant.categories)}</span></p>
   </div>
   <div class="restaurant__overview">
+    <hr>
+    <h3>Foods</h3>
+    <p><span id="food">${arrayRenderer(restaurant.restaurant.menus.foods)}</span></p>
+    <h3>Drinks</h3>
+    <p><span id="drink">${arrayRenderer(restaurant.restaurant.menus.drinks)}</span></p>
     <h3>Description</h3>
     <p>${restaurant.restaurant.description}</p>
+    <hr>
   </div>
 </div>
 `;
