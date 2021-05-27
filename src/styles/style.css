@@ -134,7 +134,7 @@
     padding: 32px;
     flex: 1;
   } */
-   
+  
   .content {
     padding: 32px;
     flex: 1;
@@ -146,8 +146,16 @@
     font-weight: bold;
     text-align: center;
   }
+  
+  /*
+    Detail
+  */
+  
+  .detail-class {
+    padding: 32px;
+    flex: 1;
+  }
 
-   
   /*
     restaurants
   */

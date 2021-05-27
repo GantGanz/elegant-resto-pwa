@@ -11,6 +11,7 @@ function arrayRenderer(array) {
 // <hr></hr>
 
 const createRestaurantDetailTemplate = (restaurant) => `
+<div class="detail-class">
   <h2 class="restaurant__title">${restaurant.restaurant.name}</h2>
   <img class="restaurant__poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="${restaurant.restaurant.name}" />
   <div class="restaurant__info">
@@ -33,6 +34,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <p>${restaurant.restaurant.description}</p>
     <hr>
   </div>
+</div>
 </div>
 `;
 
