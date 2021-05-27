@@ -1,14 +1,20 @@
+/* eslint-disable no-plusplus */
 import CONFIG from '../../globals/config';
 
 function arrayRenderer(array) {
   return array.map((object) => object.name).join(' - ');
 }
-// function arraysRenderer(arrays) {
-//   return arrays.map((array) => arrayRenderer(array));
-// }
-// <h3>Customer Reviews</h3>
-// <p>${arraysRenderer(restaurant.restaurant.customerReviews)}</p>
-// <hr></hr>
+function arraysRenderer(arrays) {
+  let html = '';
+  for (let i = 0; i < arrays.length; i++) {
+    html += `
+    <p><strong>Name</strong>: ${arrays[i].name} (${arrays[i].date})</p>
+    <p>Review: ${arrays[i].review}</p>
+    <hr>
+    `;
+  }
+  return html;
+}
 
 const createRestaurantDetailTemplate = (restaurant) => `
 <div class="detail-class">
@@ -33,6 +39,9 @@ const createRestaurantDetailTemplate = (restaurant) => `
     <h3>Description</h3>
     <p>${restaurant.restaurant.description}</p>
     <hr>
+    <h3 class="reviews-title">Customer Reviews</h3>
+    <hr>
+    ${arraysRenderer(restaurant.restaurant.customerReviews)}
   </div>
 </div>
 </div>

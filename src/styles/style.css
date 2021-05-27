@@ -155,6 +155,9 @@
     padding: 32px;
     flex: 1;
   }
+  .reviews-title{
+    text-align: center;
+  }
 
   /*
     restaurants
